@@ -1,0 +1,244 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium Auto Mechanic Design System - Dark Industrial Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Core Dark Palette */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Automotive Red Accent */
+    --primary: 0 85% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 14%;
+    --ring: 0 85% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --graphite: 0 0% 12%;
+    --steel: 0 0% 22%;
+    --chrome: 0 0% 75%;
+    --red-glow: 0 85% 50%;
+    --red-deep: 0 75% 35%;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Card */
+  .glass-card {
+    @apply relative overflow-hidden rounded-xl;
+    background: linear-gradient(
+      135deg,
+      hsl(0 0% 10% / 0.8) 0%,
+      hsl(0 0% 6% / 0.6) 100%
+    );
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(0 0% 20% / 0.4);
+    box-shadow: 
+      0 8px 32px hsl(0 0% 0% / 0.4),
+      inset 0 1px 0 hsl(0 0% 100% / 0.05);
+  }
+
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(0 0% 100% / 0.1),
+      transparent
+    );
+  }
+
+  /* Red Glow Effect */
+  .red-glow {
+    box-shadow: 
+      0 0 20px hsl(0 85% 50% / 0.3),
+      0 0 40px hsl(0 85% 50% / 0.1);
+  }
+
+  .red-glow-hover:hover {
+    box-shadow: 
+      0 0 30px hsl(0 85% 50% / 0.5),
+      0 0 60px hsl(0 85% 50% / 0.2);
+  }
+
+  /* Metallic Gradient Text */
+  .text-metallic {
+    background: linear-gradient(
+      180deg,
+      hsl(0 0% 95%) 0%,
+      hsl(0 0% 70%) 50%,
+      hsl(0 0% 85%) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Hero Gradient Overlay */
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(0 0% 4% / 0.95) 0%,
+      hsl(0 0% 4% / 0.7) 50%,
+      hsl(0 0% 4% / 0.5) 100%
+    );
+  }
+
+  /* Section Gradient */
+  .section-gradient {
+    background: linear-gradient(
+      180deg,
+      hsl(0 0% 4%) 0%,
+      hsl(0 0% 6%) 50%,
+      hsl(0 0% 4%) 100%
+    );
+  }
+
+  /* Metallic Texture */
+  .metallic-texture {
+    background-image: 
+      linear-gradient(
+        135deg,
+        hsl(0 0% 10%) 0%,
+        hsl(0 0% 8%) 100%
+      ),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  /* Floating Button */
+  .floating-whatsapp {
+    @apply fixed bottom-6 right-6 z-50 flex items-center gap-3 px-6 py-4 rounded-full font-semibold text-white transition-all duration-300;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    box-shadow: 
+      0 8px 25px hsl(152 70% 40% / 0.4),
+      0 4px 10px hsl(0 0% 0% / 0.3);
+  }
+
+  .floating-whatsapp:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+      0 12px 35px hsl(152 70% 40% / 0.5),
+      0 6px 15px hsl(0 0% 0% / 0.4);
+  }
+}
+
+@layer utilities {
+  /* Animations */
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-right {
+    animation: slideRight 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideRight {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Stagger delays */
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+  .delay-500 { animation-delay: 0.5s; }
+}
