@@ -7,7 +7,7 @@ const CTASection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const phoneNumber = "5547996718719";
-  const message = encodeURIComponent("Olá! Gostaria de agendar um serviço.");
+  const message = encodeURIComponent("Sou do setor de mecânica automotiva e estou buscando aumentar a captação de clientes, melhorar minha presença online e gerar mais orçamentos/agendamentos.");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (
