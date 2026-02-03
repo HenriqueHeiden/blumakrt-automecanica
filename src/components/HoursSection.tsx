@@ -69,7 +69,7 @@ const HoursSection = () => {
                 <Phone className="w-5 h-5 text-primary" />
                 <div>
                   <span className="text-xs text-muted-foreground block">Telefone</span>
-                  <span className="font-semibold">(47) 99671-8719</span>
+                  <span className="font-semibold">(47) 99930-8960</span>
                 </div>
               </div>
               <div className="glass-card px-6 py-4 flex items-center gap-3">

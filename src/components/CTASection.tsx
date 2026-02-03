@@ -6,7 +6,7 @@ const CTASection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const phoneNumber = "5547996718719";
+  const phoneNumber = "5547999308960";
   const message = encodeURIComponent("Sou do setor de mecânica automotiva e estou buscando aumentar a captação de clientes, melhorar minha presença online e gerar mais orçamentos/agendamentos.");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
@@ -75,7 +75,7 @@ const CTASection = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-muted-foreground text-sm mt-6"
           >
-            (47) 99671-8719 • Resposta rápida
+            (47) 99930-8960 • Resposta rápida
           </motion.p>
         </div>
       </div>

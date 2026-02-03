@@ -3,7 +3,7 @@ import { ChevronDown, MessageCircle, Wrench } from "lucide-react";
 import heroImage from "@/assets/hero-mechanic.jpg";
 
 const HeroSection = () => {
-  const phoneNumber = "5547996718719";
+  const phoneNumber = "5547999308960";
   const message = encodeURIComponent("Sou do setor de mecânica automotiva e estou buscando aumentar a captação de clientes, melhorar minha presença online e gerar mais orçamentos/agendamentos.");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 

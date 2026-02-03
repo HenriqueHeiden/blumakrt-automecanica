@@ -17,7 +17,7 @@ const TopBar = () => {
           </div>
           <div className="flex items-center gap-2 text-muted-foreground">
             <Phone className="w-4 h-4 text-primary" />
-            <span>(47) 99671-8719</span>
+            <span>(47) 99930-8960</span>
           </div>
         </div>
         <div className="flex items-center gap-2 text-muted-foreground">

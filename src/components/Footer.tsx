@@ -19,7 +19,7 @@ const Footer = () => {
               © {new Date().getFullYear()} Auto Mecânica Premium. Todos os direitos reservados.
             </p>
             <p className="text-muted-foreground text-sm mt-1">
-              Blumenau - SC | (47) 99671-8719
+              Blumenau - SC | (47) 99930-8960
             </p>
           </div>
         </div>
